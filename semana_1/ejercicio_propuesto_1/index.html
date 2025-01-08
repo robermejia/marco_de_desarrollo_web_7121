@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos de desarrollo web</title>
+    <style>
+        :root {
+            --color-bg: #4b1b1b;
+            --color-text: #f2f5e7;
+            --color-border: #969071;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: min(100%, 600px);
+            height: auto;
+        }
+
+        p::selection {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+
+        header,
+        footer {
+            text-align: center;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            padding: 1rem 0;
+        }
+
+        form {
+            margin: 1rem auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+            border: thin solid var(--color-border);
+            padding: 1rem 0.5rem;
+            border-radius: 10px;
+            width: min(600px, 100%);
+        }
+
+        form * {
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        form input {
+            border: thin solid #acacac;
+            padding: 0.2rem 0.5rem;
+        }
+
+        form button {
+            width: auto;
+            padding: 0.2rem 1rem;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            border: none;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lorem ipsum</h1>
+        <h3>dolor sit amet consectetur adipisicing elit.</h3>
+    </header>
+    <main style="padding: 1rem;">
+        <p>
+            Necessitatibus harum cum hic obcaecati distinctio architecto culpa, ipsa labore consequuntur ad iste amet!
+            Totam
+            cupiditate facere quam aspernatur sunt, obcaecati ad!
+        </p>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-evenly;">
+            <div style="max-width: 400px;">
+                <p style="text-align: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/T-rex_skull_5.jpg"
+                        alt="Fosil de dinosaurio">
+                </p>
+            </div>
+            <div>
+                <form>
+                    <label for="num1">Número #1</label>
+                    <input type="number" id="num1">
+                    <label for="num2">Número #2</label>
+                    <input type="number" id="num2">
+                    <button type="button" onclick="suma()">
+                        Sumar
+                    </button>
+                    <p style="text-align: center;" id="resultado"></p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>2025 ©</footer>
+    <script>
+        const suma = () => {
+            let n1 = parseFloat(document.getElementById("num1").value);
+            let n2 = parseFloat(document.getElementById("num2").value);
+            document.getElementById("resultado").innerHTML = "Resultado: " + (n1 + n2);
+        };
+    </script>
+</body>
+
+</html>
