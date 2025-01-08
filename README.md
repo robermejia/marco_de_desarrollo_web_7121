@@ -6,4 +6,4 @@
 
 ## Grabaciones
 ### S01.s1 - Concepto de Frontend, Concepto de Frameworks y su importancia
-[![YouTube Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+[![YouTube Video](https://img.youtube.com/vi/bNxuEGr1Xso/0.jpg)](https://www.youtube.com/watch?v=bNxuEGr1Xso)
