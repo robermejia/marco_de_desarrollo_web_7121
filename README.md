@@ -6,4 +6,8 @@
 
 ## Grabaciones
 ### S01.s1 - Concepto de Frontend, Concepto de Frameworks y su importancia
-[![YouTube Video](https://img.youtube.com/vi/bNxuEGr1Xso/0.jpg)](https://www.youtube.com/watch?v=bNxuEGr1Xso)
+[![YouTube Video](https://img.youtube.com/vi/bNxuEGr1Xso/1.jpg)](https://www.youtube.com/watch?v=bNxuEGr1Xso)
+### S01.s2 - Filas, Columnas, Colores, Margen, Padding,  imagen, Menú responsive, Botones
+[![YouTube Video](https://img.youtube.com/vi/eKJgq06l6vU/1.jpg)](https://www.youtube.com/watch?v=eKJgq06l6vU)
+### S02.s1 - Formularios, Modal, Carrusel
+[![YouTube Video](https://img.youtube.com/vi/LltLlXLE_bY/1.jpg)](https://www.youtube.com/watch?v=LltLlXLE_bY)
