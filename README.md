@@ -13,3 +13,7 @@
 [![YouTube Video](https://img.youtube.com/vi/LltLlXLE_bY/1.jpg)](https://www.youtube.com/watch?v=LltLlXLE_bY)
 ### S02.s2 - Cordinación primer avance proyecto
 [![YouTube Video](https://img.youtube.com/vi/sPmNUDDeZ0I/1.jpg)](https://www.youtube.com/watch?v=sPmNUDDeZ0I)
+### S03.s1 - Primeros pasos con Spring Boot - parte 1
+[![YouTube Video](https://img.youtube.com/vi/Q2vukM4wCTM/1.jpg)](https://www.youtube.com/watch?v=Q2vukM4wCTM)
+### S03.s1 - Primeros pasos con Spring Boot - parte 2
+[![YouTube Video](https://img.youtube.com/vi/RuqBUuA2BPM/1.jpg)](https://www.youtube.com/watch?v=RuqBUuA2BPM)
