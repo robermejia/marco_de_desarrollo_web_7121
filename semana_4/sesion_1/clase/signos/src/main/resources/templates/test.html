@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div th:if="not ${error}">
+        <h1>Fragmentos</h1>
+        <div th:replace="~{components/test-template :: tarjeta('Titulo 1',~{:: p#text-1})}">
+            <p id="text-1">Lorem</p>
+        </div>
+        <div th:replace="~{components/test-template :: tarjeta('Titulo 2',~{:: p#text-2})}">
+            <p id="text-2">Ipsum</p>
+        </div>
+        <div th:replace="~{components/test-template :: tarjeta('Titulo 3',~{:: p.especial})}">
+            <p class="especial">Ergo</p>
+        </div>
+        <div th:replace="~{components/test-template :: tarjeta('Titulo 4',~{:: #text-4})}">
+            <p id="text-4">Alfa</p>
+        </div>
+    </div>
+    <div th:if="${error}">
+        <h1>Trabajando con datos</h1>
+        <p th:text="|Mensaje: ${mensaje}|"></p>
+        <p>Número enviado: [[${numero}]]</p>
+        <h3 th:if="${nombres.length} neq 0">Nombres</h3>
+        <!-- <h3 th:if="not ${#arrays.isEmpty(nombres)}">Nombres</h3> -->
+        <ul th:each="n : ${nombres}">
+            <li>[[${n}]]</li>
+        </ul>
+        <p><b>Nombres del array:</b> [[${#strings.arrayJoin(nombres,' - ')}]]</p>
+        <div th:switch="${dia}">
+            <p th:case="1">[[${dia}]] - Lunes</p>
+            <p th:case="2">[[${dia}]] - Martes</p>
+            <p th:case="3">[[${dia}]] - Miércoles</p>
+            <p th:case="4">[[${dia}]] - Jueves</p>
+            <p th:case="5">[[${dia}]] - Viernes</p>
+            <p th:case="6">[[${dia}]] - Sábado</p>
+            <p th:case="7">[[${dia}]] - Domingo</p>
+            <p th:case="*">[[${dia}]] - Valor no válido</p>
+        </div>
+        <p th:text="${user} ?: _">Sin datos de ${user}</p>
+        <p th:text="${user} ?: 'Sin datos de ${user}'"></p>
+        <p th:text="${mensaje} ?: _">Sin datos de ${mensaje}</p>
+        <hr>
+        <h2>Fechas y horas con Java.Time</h2>
+        <p>Fecha: [[${fechaActual}]]</p>
+        <p>Fecha: [[${#temporals.format(fechaActual, 'dd/MM/yy')}]]</p>
+        <p>Fecha: [[${#temporals.format(fechaActual, 'dd/MMM/yyyy')}]]</p>
+        <p>Fecha: [[${#temporals.format(fechaActual, 'dd - MMMM - yyyy')}]]</p>
+        <p>Fecha: [[${#temporals.format(fechaActual, 'LONG')}]]</p>
+        <p>Fecha: [[${#temporals.format(fechaActual, 'FULL')}]]</p>
+        <hr>
+        <p>Hora: <span th:text="${horaActual}"></span></p>
+        <p>Hora: <span th:text="${#temporals.format(horaActual, 'hh:mm:ss a')}"></span></p>
+        <p>Hora: <span th:text="${#temporals.format(horaActual, 'SHORT')}"></span></p>
+        <p>Hora: <span th:text="${#temporals.format(horaActual, 'MEDIUM')}"></span></p>
+        <p>Hora: <span th:text="${#temporals.format(horaActual, 'LONG')}"></span></p>
+        <p>Hora: <span th:text="${#temporals.format(horaActual, 'FULL')}"></span></p>
+        <hr>
+        <p>Fecha y hora: [[${horaFechaActual}]]</p>
+        <p>Fecha: [[${#temporals.format(horaFechaActual, 'LONG')}]]</p>
+        <p>Fecha: [[${#temporals.format(horaFechaActual, 'FULL')}]]</p>
+    </div>
+</body>
+
+</html>
