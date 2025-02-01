@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera(~{::title},~{::enlaces})}">
+    <title>Tipos</title>
+    <th:block th:fragment="enlaces" />
+</head>
+
+<body>
+    <header th:replace="~{components/template :: header}"></header>
+    <main class="container my-4">
+        <h2 class="mb-4">Animales y elementos del zodiaco chino</h2>
+        <div class="row">
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Animal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="animal : ${animales}">
+                            <td>[[${animal}]]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Elementos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="tipo : ${tipos}">
+                            <td>[[${tipo}]]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="~{components/template :: footer}"></footer>
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

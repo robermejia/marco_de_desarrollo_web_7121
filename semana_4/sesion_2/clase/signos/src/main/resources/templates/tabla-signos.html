@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera(~{::title},~{::enlaces})}">
+    <title>Pronóstico</title>
+    <th:block th:fragment="enlaces"/>
+</head>
+<body>
+    <header th:replace="~{components/template :: header}"></header>
+    <main class="container my-4">
+        <h1>Tabla de signos del nuevo milenio</h1>
+        <hr>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-2" th:each="s : ${datos}">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="badge text-bg-warning">ID: [[${s.id}]]</span>                        
+                        <th:block th:switch="${s.tipo}">
+                            <span th:case="Metal" class="badge text-dark" style="background-color: rgb(152, 167, 183);">[[${s.nombre}]] - [[${s.tipo}]]</span>
+                            <span th:case="Agua" class="badge text-dark" style="background-color: rgb(150, 211, 240);">[[${s.nombre}]] - [[${s.tipo}]]</span>
+                            <span th:case="Fuego" class="badge text-dark" style="background-color: rgb(235, 166, 155);">[[${s.nombre}]] - [[${s.tipo}]]</span>
+                            <span th:case="Madera" class="badge text-dark" style="background-color: rgb(240, 236, 182);">[[${s.nombre}]] - [[${s.tipo}]]</span>
+                            <span th:case="Tierra" class="badge text-dark" style="background-color: rgb(225, 197, 152);">[[${s.nombre}]] - [[${s.tipo}]]</span>
+                            <span th:case="*" class="badge text-dark" style="background-color: rgb(245, 144, 203);">[[${s.nombre}]] - [[${s.tipo}]]</span>
+                        </th:block>
+                    </div>
+                    <div class="card-body">
+                        <img th:src="${s.imagen}" class="img-fluid">
+                        <p>[[${s.descripcion}]]</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="alert alert-info my-2">
+                            <strong>Inicio</strong>: [[${#temporals.format(s.fechaInicio, 'dd-MM-yyyy')}]]
+                        </p>
+                        <p class="alert alert-info">
+                            <strong>Fin</strong>: [[${#temporals.format(s.fechaFin, 'dd-MM-yyyy')}]]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer th:replace="~{components/template :: footer}"></footer>
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>
