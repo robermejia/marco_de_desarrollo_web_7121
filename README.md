@@ -17,3 +17,9 @@
 [![YouTube Video](https://img.youtube.com/vi/Q2vukM4wCTM/1.jpg)](https://www.youtube.com/watch?v=Q2vukM4wCTM)
 ### S03.s1 - Primeros pasos con Spring Boot - parte 2
 [![YouTube Video](https://img.youtube.com/vi/RuqBUuA2BPM/1.jpg)](https://www.youtube.com/watch?v=RuqBUuA2BPM)
+### S03.s2 - Dependencia Sring Web
+[![YouTube Video](https://img.youtube.com/vi/NaIwUsxrir4/1.jpg)](https://www.youtube.com/watch?v=NaIwUsxrir4)
+### S04.s1 - Thymeleaf
+[![YouTube Video](https://img.youtube.com/vi/X35ZyZcV90g/1.jpg)](https://www.youtube.com/watch?v=X35ZyZcV90g)
+### S04.s2 - Spring Boot - Repaso
+[![YouTube Video](https://img.youtube.com/vi/G8e0BMwkdO4/1.jpg)](https://www.youtube.com/watch?v=G8e0BMwkdO4)
