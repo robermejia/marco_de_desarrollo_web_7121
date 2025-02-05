@@ -23,3 +23,5 @@
 [![YouTube Video](https://img.youtube.com/vi/X35ZyZcV90g/1.jpg)](https://www.youtube.com/watch?v=X35ZyZcV90g)
 ### S04.s2 - Spring Boot - Repaso
 [![YouTube Video](https://img.youtube.com/vi/G8e0BMwkdO4/1.jpg)](https://www.youtube.com/watch?v=G8e0BMwkdO4)
+### S04.s2 - Spring Boot - Repaso
+[![YouTube Video](https://img.youtube.com/vi/lZ1mvARQcoo/1.jpg)](https://www.youtube.com/watch?v=lZ1mvARQcoo)
