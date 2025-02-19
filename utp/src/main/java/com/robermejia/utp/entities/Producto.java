@@ -1,86 +1,51 @@
 package com.robermejia.utp.entities;
 
+import org.hibernate.validator.constraints.URL;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
+
+@Entity
+@Table(name = "productos")
 public class Producto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @NotBlank(message = "El nombre es obligatorio")
+    @Size(min = 3, max = 50, message = "El nombre debe tener entre 3 y 50 caracteres")
     private String nombre;
-    private String marca;
-    private Double precio;
-    private String descripcion;
+
+    @NotBlank(message = "La imagen es obligatoria")
+    @URL(message = "Debe ser una URL válida")
     private String imagen;
-    private Integer stock;
 
-    public Producto() {
-    }
+    @Positive(message = "El precio debe ser positivo")
+    @DecimalMin(value = "0.01", message = "El precio debe ser mayor a 0.00")
+    private double precio;
 
-    public Producto(Integer id, String nombre, String marca, Double precio, String descripcion, String imagen,
-            Integer stock) {
-        this.id = id;
+    @Min(value = 0, message = "El stock debe ser mayor o igual a 0")
+    private int stock;
+
+    public Producto() {}
+
+    public Producto(String nombre, String imagen, double precio, int stock) {
         this.nombre = nombre;
-        this.marca = marca;
-        this.precio = precio;
-        this.descripcion = descripcion;
         this.imagen = imagen;
+        this.precio = precio;
         this.stock = stock;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(Double precio) {
-        this.precio = precio;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getImagen() {
-        return imagen;
-    }
-
-    public void setImagen(String imagen) {
-        this.imagen = imagen;
-    }
-
-    public Integer getStock() {
-        return stock;
-    }
-
-    public void setStock(Integer stock) {
-        this.stock = stock;
-    }
-
-    
-
-    
+    // Getters and setters
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getImagen() { return imagen; }
+    public void setImagen(String imagen) { this.imagen = imagen; }
+    public double getPrecio() { return precio; }
+    public void setPrecio(double precio) { this.precio = precio; }
+    public int getStock() { return stock; }
+    public void setStock(int stock) { this.stock = stock; }
 }
