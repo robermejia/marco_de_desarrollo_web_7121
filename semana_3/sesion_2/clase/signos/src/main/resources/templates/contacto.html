@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Contacto')}">
+    <title>Document</title>
+</head>
+
+<body>
+    <header th:replace="~{components/template :: header}"></header>
+    <main class="container my-4">
+        <h1>Contacto</h1>
+        <hr>
+        <form>
+            <label class="form-label" for="nombre">Nombres</label>
+            <input class="form-control" type="text" id="nombre">
+            <label class="form-label" for="correo">Correo</label>
+            <input class="form-control" type="text" id="correo">
+            <label class="form-label" for="mensaje">Mensaje</label>
+            <textarea class="form-control" id="mensaje"></textarea>
+            <p class="mt-4 text-center">
+                <button class="btn btn-primary">Enviar</button>
+            </p>
+        </form>
+    </main>
+    <footer th:replace="~{components/template :: footer}"></footer>
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

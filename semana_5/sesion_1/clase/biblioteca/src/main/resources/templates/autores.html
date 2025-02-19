@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <h2>Mantenimiento de autores</h2>
+   <form action="/autores/procesar" method="post" th:object="${autor}">
+       <input type="hidden" th:field="*{id}">
+       <p>
+           <label for="nombres">Nombres</label>
+           <input type="text" id="nombres" th:field="*{nombres}" required>
+       </p>
+       <p>
+           <label for="apellidos">Apellidos</label>
+           <input type="text" id="apellidos" th:field="*{apellidos}" required>
+       </p>
+       <button type="submit">Procesar</button>
+   </form>
+   <p th:if="${mensaje}">[[${mensaje}]]</p>
+   <hr>
+   <table border="1">
+       <caption>Lista de autores</caption>
+       <tr>
+           <th>Id</th>
+           <th>Nombres</th>
+           <th>Apellidos</th>
+           <th colspan="2">Acciones</th>
+       </tr>
+       <tr th:each="a : ${autores}">
+           <td>[[${a.id}]]</td>
+           <td>[[${a.nombres}]]</td>
+           <td>[[${a.apellidos}]]</td>
+           <td><a th:href="@{/autores/editar/{id}(id=${a.id})}">Editar</a></td>
+           <td>
+               <a th:href="@{/autores/eliminar/{id}(id=${a.id})}" 
+               onclick="return confirm('¿Deseas eliminar?')">
+                   Eliminar
+               </a>
+           </td>
+       </tr>
+   </table>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera(~{::title},~{::link})}">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/css/util.css">
+</head>
+
+<body>
+    <header th:replace="~{components/template :: header}"></header>
+    <main class="container my-4">
+        <p class="alert alert-danger my-2">Error</p>
+        <hr>
+        <a class="btn btn-info" href="/inicio">Ir al inicio</a>
+    </main>
+    <footer th:replace="~{components/template :: footer}"></footer>
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>
