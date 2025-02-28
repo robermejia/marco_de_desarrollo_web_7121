@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.robermejia.utp.entities.Producto;
 import com.robermejia.utp.repositories.ProductoRepository;
+import com.robermejia.utp.services.CategoriaService;
 import com.robermejia.utp.services.ProductoService;
 
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,9 @@ public class AdminController {
     @Autowired
     private ProductoService productoService;
 
+    @Autowired
+    private CategoriaService categoriaService;
+
     @GetMapping("/administracion")
     public String admin(Model model) {
         model.addAttribute("productos", productoRepository.findAll());
@@ -36,6 +40,7 @@ public class AdminController {
     public String nuevoProducto(Model model) {
         Producto producto = new Producto();
         model.addAttribute("producto", producto);
+        model.addAttribute("categorias", categoriaService.getCategorias());
         return "formulario-productos";
     }
 

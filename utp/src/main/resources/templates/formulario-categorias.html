@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Nueva categoría')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva categoría</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container mt-5">
+        <section class="py-5 text-center">
+            <h1>Formulario de Nueva Categoría</h1>
+            <p class="lead">Añade una nueva categoría.</p>
+        </section>
+        
+        <div th:if="${mensajeError != null}" class="alert alert-danger" role="alert">
+            <p th:text="${mensajeError}"></p>
+        </div>
+
+        <div th:if="${fieldErrors != null}" class="alert alert-danger" role="alert">
+            <th:block th:each="error : ${fieldErrors}">
+                <p th:text="${error.getField()} + ': ' + ${error.getDefaultMessage()}"></p>
+            </th:block>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="container">
+            <div class="col-lg-8 col-md-12 col-sm-12 bg-yellow p-4 rounded mx-auto py-5">
+                <form th:action="@{/categorias/guardar}" th:object="${categoria}" method="post">
+                    <input type="hidden" th:field="*{id}">
+                    <div class="mb-3">
+                        <label for="nombreCategoria" class="form-label text-light">Nombre:</label>
+                        <input type="text" class="form-control border-yellow" id="nombreCategoria" th:field="*{nombre}"
+                            required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-warning mt-3">Guardar</button>
+                    </div>
+                    <a th:href="@{/administracion/categoria}">Regresar</a>
+                </form>
+            </div>
+        </div>
+        
+        <section class="py-4">
+            <!-- Agrega más secciones según sea necesario -->
+        </section>
+        
+        <!-- LOGIN MODAL -->
+        <th:block th:replace="~{components/template :: modal1}"></th:block>  
+        
+    </main>
+    
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>

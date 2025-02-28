@@ -39,7 +39,7 @@ public class ProductoController {
         } 
 
         productoService.guardarProducto(producto);
-        return "redirect:/administracion/nuevo-producto";
+        return "redirect:/administracion";
     }
 
     @PostMapping("/productos/editar")
@@ -53,6 +53,6 @@ public class ProductoController {
         }
 
         productoService.editarProducto(producto);
-        return "redirect:/administracion/nuevo-producto";
+        return "redirect:/administracion";
     }
 }

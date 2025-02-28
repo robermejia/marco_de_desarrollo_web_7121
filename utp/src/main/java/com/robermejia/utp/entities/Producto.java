@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.URL;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Min;
 
 @Entity
 @Table(name = "productos")
@@ -28,13 +29,17 @@ public class Producto {
     @Min(value = 0, message = "El stock debe ser mayor o igual a 0")
     private int stock;
 
+    @Min(value = 0, message = "La categoría es obligatoria")
+    private Integer categoria_id;
+
     public Producto() {}
 
-    public Producto(String nombre, String imagen, double precio, int stock) {
+    public Producto(String nombre, String imagen, double precio, int stock, Integer categoria_id) {
         this.nombre = nombre;
         this.imagen = imagen;
         this.precio = precio;
         this.stock = stock;
+        this.categoria_id = categoria_id;
     }
 
     // Getters and setters
@@ -48,4 +53,6 @@ public class Producto {
     public void setPrecio(double precio) { this.precio = precio; }
     public int getStock() { return stock; }
     public void setStock(int stock) { this.stock = stock; }
+    public void setCategoria_id(Integer categoria_id) { this.categoria_id = categoria_id; }
+    public Integer getCategoria_id() { return categoria_id; }
 }

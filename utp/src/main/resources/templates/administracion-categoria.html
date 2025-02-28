@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="~{components/template :: cabecera('Administración Categoría')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración Categoría</title>
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header th:replace="~{components/template :: header}"></header>
+    
+    <main class="container mt-5">
+        <section class="py-5 text-center">
+            <h1>Panel de administración de categorias</h1>
+            <p class="lead">Lee, edita, Actualiza y elimina categorias.</p>
+            <a class="btn btn-dark" th:href="@{/administracion/categoria/nuevo}">Añadir</a>
+        </section>
+
+        <!-- ADMINISTRACIÓN -->
+        <div class="container mt-4">
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div th:if="${mensaje != null}" class="alert alert-success" role="alert">
+                        <p th:text="${mensaje}"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <table class="table table-striped table-yellow">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="categoria : ${categorias}">
+                                <td th:text="${categoria.id}"></td>
+                                <td th:text="${categoria.nombre}"></td>
+                                <td>
+                                    <a th:href="@{/administracion/categoria/{id}/editar(id=${categoria.id})}"
+                                        class="btn btn-yellow btn-sm">Editar</a>
+                                    <form th:action="@{/administracion/categoria/{id}/eliminar(id=${categoria.id})}" method="post">
+                                        <button type="submit" class="btn btn-dark btn-sm mt-3">Eliminar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <section class="py-4">
+            <!-- Agrega más secciones según sea necesario -->
+        </section>
+        
+        <!-- LOGIN MODAL -->
+        <th:block th:replace="~{components/template :: modal1}"></th:block>  
+        
+    </main>
+    
+    <!-- FOOTER-->
+    <footer th:replace="~{components/template :: footer}"></footer>
+    
+    <!--SCRIPS-->
+    <th:block th:replace="~{components/template :: scripts}"></th:block>
+</body>
+
+</html>
