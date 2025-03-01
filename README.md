@@ -31,3 +31,13 @@
 [![YouTube Video](https://img.youtube.com/vi/Z1s5s5o0PZU/1.jpg)](https://www.youtube.com/watch?v=Z1s5s5o0PZU)
 ### S06.s2 - Repaso, dudas y consultas
 [![YouTube Video](https://img.youtube.com/vi/Zs40Z92K-Uo/1.jpg)](https://www.youtube.com/watch?v=Zs40Z92K-Uo)
+### S07.s1 - Spring Security
+[![YouTube Video](https://img.youtube.com/vi/r7pXYVyCR1Q/1.jpg)](https://www.youtube.com/watch?v=r7pXYVyCR1Q)
+### S07.s2 - Roles
+[![YouTube Video](https://img.youtube.com/vi/Ft7HBEua--o/1.jpg)](https://www.youtube.com/watch?v=Ft7HBEua--o)
+### S08.s1 - JWT
+[![YouTube Video](https://img.youtube.com/vi/5KTk_exQTUg/1.jpg)](https://www.youtube.com/watch?v=5KTk_exQTUg)
+### S08.s2 - Entrega Proyecto Final - parte 1
+[![YouTube Video](https://img.youtube.com/vi//1.jpg)](https://www.youtube.com/watch?v=)
+### S09.s1 - Entrega Proyecto Final - parte 2
+[![YouTube Video](https://img.youtube.com/vi//1.jpg)](https://www.youtube.com/watch?v=)
