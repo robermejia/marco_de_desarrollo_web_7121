@@ -37,7 +37,7 @@
 [![YouTube Video](https://img.youtube.com/vi/Ft7HBEua--o/1.jpg)](https://www.youtube.com/watch?v=Ft7HBEua--o)
 ### S08.s1 - JWT
 [![YouTube Video](https://img.youtube.com/vi/5KTk_exQTUg/1.jpg)](https://www.youtube.com/watch?v=5KTk_exQTUg)
-### S08.s2 - Entrega Proyecto Final - parte 1
-[![YouTube Video](https://img.youtube.com/vi//1.jpg)](https://www.youtube.com/watch?v=)
-### S09.s1 - Entrega Proyecto Final - parte 2
-[![YouTube Video](https://img.youtube.com/vi//1.jpg)](https://www.youtube.com/watch?v=)
+### S08.s2 - Presentación Proyecto Final - parte 1
+[![YouTube Video](https://img.youtube.com/vi/Ck-aMwpLwlY/1.jpg)](https://www.youtube.com/watch?v=Ck-aMwpLwlY)
+### S09.s1 - Presentación Proyecto Final - parte 2
+[![YouTube Video](https://img.youtube.com/vi/yMt9joTpUHM/1.jpg)](https://www.youtube.com/watch?v=yMt9joTpUHM)
